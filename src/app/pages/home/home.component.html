@@ -1,0 +1,66 @@
+<div class="section mt-3">
+    <div class="px-3">
+        <div class="theme-container">
+            <mat-card class="p-0 o-hidden" fxLayout="row wrap">
+                <app-header-image [fullscreen]="true" [contentOffsetToTop]="true" [bgImageAnimate]="true"
+                    [isHomePage]="true" backgroundImage="assets/images/others/homepage.jpg"
+                    title="Welcome to SkyWave Restaurant" desc="Healthy, Authentic & Safe Food"></app-header-image>
+            </mat-card>
+        </div>
+    </div>
+</div>
+
+<div class="section mt-3">
+    <div class="px-3">
+        <div class="theme-container">
+            <h1 class="section-title">About Us</h1>
+            <p class="section-desc text-muted">Restoring authenticity to food from the ground up is the missioin that
+                drives us.</p>
+            <mat-card class="p-0 o-hidden" fxLayout="row nowrap">
+                <app-header-image [fullscreen]="false" [contentOffsetToTop]="false" [bgImageAnimate]="false"
+                    [isHomePage]="false" backgroundImage="assets/images/others/about-2.jpg" [contentMinHeight]="500"
+                    [contentMinWidth]="600">
+                </app-header-image>
+                <div class="contentAbout pl-4">
+                    <div class="aboutHeader">
+                        Since 2007, at your service
+                    </div>
+                    <div class="aboutContains">
+                        <p>
+                            In 2007, the SkyWave group opened its first hotel outside India, the SkyWave Hotel in
+                            Sana'a, in Yemen and in the late 2019s, acquired interests in the Court Hotel (now
+                            comprising SkyWave 51 Gate Suites and Residences and Court, A SkyWave Hotel) in London.In
+                            2020, the SkyWave group acquired, under a license agreement, each of the SkyWave in
+                            Bengaluru, in Chennai and Sammoy Hotel in Ooty. With the opening of the SkyWave in
+                            Bengaluru, the SkyWave Group made its foray into Bengaluru. The five-star deluxe hotel,
+                            SkyWave in Kolkata, was opened in the year 2020, and with this, the SkyWave group became the
+                            only hotel chain in India with a presence in the six major metropolitan cities of India,
+                            namely Mumbai, Delhi, Kolkata, Bengaluru, Hyderabad, and Chennai.
+                        </p>
+                        <p>
+                            Concurrently with the expansion of its luxury hotel chain in the major metropolitan cities,
+                            the SkyWave Group also expanded its business hotels division in the major metropolitan and
+                            large secondary cities in India.
+                        </p>
+                    </div>
+                    <div class="aboutBitton">
+                        <button mat-raised-button color="warn">Read More</button>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>
+
+<div class="section default mt-3">
+    <div class="px-3">
+        <div class="theme-container">
+            <h1 class="section-title">Menu</h1>
+            <p class="section-desc text-muted"> Our Dishes</p>
+            <app-menu-items-carousel [menuItems]="specialMenuItems"></app-menu-items-carousel>
+        </div>
+    </div>
+</div>
+
+
+<app-get-in-touch></app-get-in-touch>

@@ -1,0 +1,27 @@
+.get-in-touch{
+    position: relative;
+    margin-top: 80px;
+    img{
+        max-width: 200px; 
+        position: absolute; 
+        bottom: 0;
+        left: -35px;
+    }
+    .content{
+        padding-left: 200px;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: "Lora", serif;
+    }
+}
+.leftAlign{
+    // display: flex;
+    float: left;
+}
+.rightAlign{
+    display: flex;
+    /* margin-left: 34px; */
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
