@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-get-in-touch',
@@ -7,11 +7,14 @@ import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
   styleUrls: ['./get-in-touch.component.scss']
 })
 export class GetInTouchComponent implements OnInit {
-  public bgImage: SafeStyle = ''
-  constructor( private sanitizer:DomSanitizer) { }
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
-    this.bgImage = this.sanitizer.bypassSecurityTrustStyle('url('+'assets/images/others/operator.png' +')'); 
+  }
+
+  navigateContactUs(){
+    this.router.navigate(['/contact']);
   }
 
 }

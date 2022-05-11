@@ -1,10 +1,41 @@
-.contentAbout{
-    float: right;
+.abtus-section{
+    display: flex;
+    flex-direction: row;
 }
-.aboutHeader{
-    font-size: 25px;
-    font-weight: bold;
-    /* font-size: larger; */
+.abtus-img{
+    width: 5000px;
+}
+
+.mat-card-header .mat-card-title {
+    margin-bottom: 0px;
+    margin-top: 5px;
     font-family: "Lora", serif;
-    color: orangered;
+    color: #c62828;
+    font-weight: bold;
+}
+
+.rdmore{
+    margin: 0 16px !important;
+    background-color: #c62828 !important;
+    color: #ffffff !important;
+}
+
+.mat-card>.mat-card-actions:last-child{
+    margin-bottom: 0px !important;
+}
+.mat-card-actions{
+  padding: 0px 0 !important;
+}
+
+@media screen and (max-width: 600px) {
+    .abtus-section{
+        display: unset;
+        // flex-direction: row;
+    }
+    .abtus-img{
+        width: unset;
+    }
+    .p-0{
+        padding: 10px !important;
+    }
 }

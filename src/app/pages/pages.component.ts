@@ -99,11 +99,12 @@ export class PagesComponent implements OnInit {
     });    
   } 
 
+  //get Categories Method implemention to get categories.
   public getCategories(){  
     if(this.appService.Data.categories.length == 0) { 
       this.appService.getCategories().subscribe(data => { 
         this.appService.Data.categories = data;
-      });
+      }, (error)=>{console.log(error)});
     } 
   }
 

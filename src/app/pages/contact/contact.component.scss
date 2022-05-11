@@ -1,3 +1,32 @@
 .contact-map .sebm-google-map-container {
     height: 400px;
 }
+
+.aligned-with-icon{
+    position: relative;
+    padding: 5px;
+}
+
+#contactUsMenulist_column{
+    display: none;
+}
+#contactUsMenulist_row{
+    display: block;
+}
+
+.contactMenuList{
+    flex-direction: column;
+    place-content: center flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+    #contactUsMenulist_column{
+        display: block !important;
+    }
+    #contactUsMenulist_row{
+        display: none !important;
+    }
+}

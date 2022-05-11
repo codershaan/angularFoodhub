@@ -10,13 +10,12 @@ import { Settings, AppSettings } from '../../app.settings';
 export class HeaderImageComponent implements OnInit {
   @Input('backgroundImage') backgroundImage:any;
   @Input('bgImageAnimate') bgImageAnimate:any;
-  @Input('contentOffsetToTop') contentOffsetToTop:boolean = true;
+  @Input('contentOffsetToTop') contentOffsetToTop:boolean = false;
   @Input('contentMinHeight') contentMinHeight:any;
-  @Input('contentMinWidth') contentMinWidth:any;
   @Input('title') title:any;
   @Input('desc') desc:any;
   @Input('isHomePage') isHomePage:boolean = false;
-  @Input('fullscreen') fullscreen: boolean = true; 
+  @Input('fullscreen') fullscreen: boolean = false; 
   public bgImage:any;
   public settings: Settings;
   constructor(public appSettings:AppSettings, private sanitizer:DomSanitizer) {

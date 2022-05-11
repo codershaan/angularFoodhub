@@ -1,10 +1,21 @@
-.align > div > mat-icon{
-    vertical-align: middle;
-
+.aligned-with-icon{
+    position: relative;
+    padding: 5px;
 }
-.align > div{
-    padding: 0px;
-    margin: 0px;
-    float: right;
-    margin-right: 24px;
+
+#menulist_column{
+    display: none;
+}
+#menulist_row{
+    display: block;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #menulist_column{
+        display: block;
+    }
+    #menulist_row{
+        display: none;
+    }
 }

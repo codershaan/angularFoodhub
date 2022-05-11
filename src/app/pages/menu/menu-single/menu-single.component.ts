@@ -26,17 +26,15 @@ export class MenuSingleComponent implements OnInit {
   }
 
   ngOnInit() { 
+    //Capturing Id from url
     this.sub = this.activatedRoute.params.subscribe(params => {  
       this.getMenuItemById(params['id']); 
     }); 
   }
 
-  ngOnDestroy() {
-    this.sub.unsubscribe();
-  }  
-
+  //Calling getMenuItemById Method
   public getMenuItemById(id:number){
-    const index: number = this.appService.Data.cartList.findIndex(item => item.id == id);
+    const index: number = this.appService.Data.cartList.findIndex((item) => {item.id == id}, (error:any)=>{console.log(error)});
     if(index !== -1){
       this.menuItem = this.appService.Data.cartList[index];
       this.quantityCount = this.menuItem.cartCount;
@@ -44,10 +42,12 @@ export class MenuSingleComponent implements OnInit {
     else{
       this.appService.getMenuItemById(id).subscribe(data=>{ 
         this.menuItem = data;  
-      });
+      }, (error: any)=> {console.log(error)});
     } 
   }
 
-
- 
+  //Destroying the object to avoid memory leaks
+  ngOnDestroy() {
+    this.sub.unsubscribe();
+  }
 }

@@ -1,0 +1,89 @@
+<div class="">
+    <app-header-image title="Contact Us" desc="GOT A QUESTION? WELL GIVE YOU STRAIGHT ANSWER" backgroundImage="assets/images/others/contact.jpg" [isHomePage]="false"></app-header-image>
+    <div class="px-3">
+        <div class="theme-container">
+            <mat-card class="menu-single my-5" style="border-top-style: solid;border-top-color: #c62828;">
+                <div id="contactUsMenulist_row" fxLayout="row" style="margin-top: 10px; margin-bottom: 10px;">
+                    <div class="contactMenuList" style="padding: 0 0 0 10%;">
+                        <mat-icon class="mat-icon-lg" style="color: #c62828;">home</mat-icon>
+                        <span style="color: #c62828; font-weight: bold;">ADDRESS:</span>
+                        <span>2903 Avenue Z,MG Marg,DL,India</span>
+                    </div>
+                    <div class="contactMenuList" style="padding: 0 0 0 20%;">
+                        <mat-icon class="mat-icon-lg" style="color: #c62828;">call</mat-icon>
+                        <span style="color: #c62828; font-weight: bold;">PHONE:</span>
+                        <span>(+91) 987 654 3210</span>
+                    </div>
+                    <div class="contactMenuList" style="padding: 0 0 0 20%; ">
+                        <mat-icon class="mat-icon-lg" style="color: #c62828;">mail</mat-icon>
+                        <span style="color: #c62828; font-weight: bold;">EMAIL:</span>
+                        <span>info@skywave.com</span>
+                    </div>
+                </div>
+                
+                <div id="contactUsMenulist_column" style="margin-top: 10px; margin-bottom: 10px;">
+                    <div class="contactMenuList" style="padding: 0 0 0 10%;">
+                        <mat-icon class="mat-icon-lg" style="color: #c62828;">home</mat-icon>
+                        <span style="color: #c62828; font-weight: bold;">ADDRESS:</span>
+                        <span>2903 Avenue Z,MG Marg,DL,India</span>
+                    </div>
+                    <div class="contactMenuList" style="padding: 0 0 0 10%;">
+                        <mat-icon class="mat-icon-lg" style="color: #c62828;">call</mat-icon>
+                        <span style="color: #c62828; font-weight: bold;">PHONE:</span>
+                        <span>(+91) 987 654 3210</span>
+                    </div>
+                    <div class="contactMenuList" style="padding: 0 0 0 10%; ">
+                        <mat-icon class="mat-icon-lg" style="color: #c62828;">mail</mat-icon>
+                        <span style="color: #c62828; font-weight: bold;">EMAIL:</span>
+                        <span>info@skywave.com</span>
+                    </div>
+                </div>
+                <div fxLayout="row wrap" class="flex-wrapper" style="margin-top: 35px;">
+                    <div fxFlex="100" fxFlex.gt-sm="50" class="px-3">
+                        <h1 class="secondary-font" style="text-align: center; color: #c62828;">Get In Touch</h1> 
+                        <div class="full-desc">
+                            <form [formGroup]="contactForm" (ngSubmit)="onContactFormSubmit()" fxLayout="row wrap" fxLayoutAlign="space-between" class="contact-form">
+                                <div fxFlex="100" class="p-2">
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>Name*</mat-label>
+                                        <input matInput placeholder="Name" formControlName="name" required>
+                                        <mat-error *ngIf="contactForm.controls.name.errors?.required">Name is required</mat-error>
+                                        <!-- <mat-error *ngIf="contactForm.controls.name.hasError('minlength')">Name isn't long enough, minimum of 4 characters</mat-error> -->
+                                    </mat-form-field> 
+                                </div>
+                                <div fxFlex="100" class="p-2">
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>Email*</mat-label>
+                                        <input matInput placeholder="Email" formControlName="email" required>
+                                        <mat-error *ngIf="contactForm.controls.email.errors?.required">Email is required</mat-error>
+                                        <mat-error *ngIf="contactForm.controls.email.hasError('invalidEmail')">Invalid email address</mat-error>
+                                    </mat-form-field> 
+                                </div>
+                                <div fxFlex="100" class="p-2">
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>Phone*</mat-label>
+                                        <input matInput placeholder="Phone" formControlName="phone" required>
+                                        <mat-error *ngIf="contactForm.controls.phone.errors?.required">Phone is required</mat-error>
+                                    </mat-form-field> 
+                                </div>
+                                <div fxFlex="100" class="p-2">
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>Message*</mat-label>
+                                        <textarea matInput placeholder="Message" formControlName="message" required rows="5"></textarea>
+                                       <mat-error *ngIf="contactForm.controls.message.errors?.required">Message is required</mat-error>
+                                    </mat-form-field>
+                                </div>
+                                <div fxFlex="100" class="text-center w-100">
+                                    <button mat-raised-button color="primary" type="submit" class="uppercase">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div fxFlex="100" fxFlex.gt-sm="50" class="px-3">
+                        <img src="assets/images/others/about-1.jpg" class="w-100">
+                    </div> 
+                </div>
+            </mat-card>
+        </div> 
+    </div> 
+</div>

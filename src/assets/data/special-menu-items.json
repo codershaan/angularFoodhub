@@ -1,7 +1,7 @@
-[
+[    
     {
         "id": 11,
-        "name": "Special Eggplants Snack",
+        "name": "Special Eggplants Snack", 
         "description": "Marinated eggplants, special sauce, greens.",
         "price": 4.50,
         "image": {
@@ -11,7 +11,7 @@
         },
         "discount": 0,
         "ratingsCount": 3,
-        "ratingsValue": 280,
+        "ratingsValue": 280, 
         "availibilityCount": 8,
         "cartCount": 0,
         "weight": 120,
@@ -20,7 +20,7 @@
     },
     {
         "id": 17,
-        "name": "Chick Soup With Rice",
+        "name": "Chick Soup With Rice", 
         "description": "Chick, round rice, onion, carrot, cherry plums, turmeric.",
         "price": 8.20,
         "image": {
@@ -30,7 +30,7 @@
         },
         "discount": 10,
         "ratingsCount": 4,
-        "ratingsValue": 480,
+        "ratingsValue": 480, 
         "availibilityCount": 8,
         "cartCount": 0,
         "weight": 130,
@@ -39,7 +39,7 @@
     },
     {
         "id": 20,
-        "name": "Beef Languet With Potato",
+        "name": "Beef Languet With Potato", 
         "description": "Beef tenderloin, butter, black pepper, tomatoes, potato.",
         "price": 18.50,
         "image": {
@@ -49,7 +49,7 @@
         },
         "discount": 0,
         "ratingsCount": 4,
-        "ratingsValue": 480,
+        "ratingsValue": 480, 
         "availibilityCount": 5,
         "cartCount": 0,
         "weight": 220,
@@ -58,7 +58,7 @@
     },
     {
         "id": 25,
-        "name": "Chicken Languet With Potato",
+        "name": "Chicken Languet With Potato", 
         "description": "Chicken fillet, potato, tomatoes",
         "price": 12.50,
         "image": {
@@ -68,7 +68,7 @@
         },
         "discount": 0,
         "ratingsCount": 4,
-        "ratingsValue": 480,
+        "ratingsValue": 480, 
         "availibilityCount": 5,
         "cartCount": 0,
         "weight": 140,
@@ -77,7 +77,7 @@
     },
     {
         "id": 27,
-        "name": "Seasonal Fruits",
+        "name": "Seasonal Fruits", 
         "description": "Delicious Seasonal Fruits",
         "price": 9.50,
         "image": {
@@ -85,9 +85,9 @@
             "medium": "assets/images/foods/desserts/1/medium.jpg",
             "big": "assets/images/foods/desserts/1/big.jpg"
         },
-        "discount": 15,
+        "discount": 10,
         "ratingsCount": 4,
-        "ratingsValue": 480,
+        "ratingsValue": 480, 
         "availibilityCount": 5,
         "cartCount": 0,
         "weight": 250,

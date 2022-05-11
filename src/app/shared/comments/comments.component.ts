@@ -49,7 +49,7 @@ export class CommentsComponent implements OnInit {
     { title: 'Very Satisfied', icon: 'sentiment_very_satisfied', percentage: 100, selected: false }
   ];
   
-  constructor(public fb: FormBuilder, private http: HttpClient, private router : Router) { }
+  constructor(public fb: FormBuilder, private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
     this.commentForm = this.fb.group({ 
@@ -63,22 +63,24 @@ export class CommentsComponent implements OnInit {
 
 
   
-  public onCommentFormSubmit(values:any,){
-        
-    if (this.commentForm.valid) { 
-      
+  public async onCommentFormSubmit(values:any,){
+    if (this.commentForm.valid) {
       if(values.rate){
-        let data = {
-          rate :this.commentForm.controls.rate.value,
-          review: this.commentForm.controls.review.value,
-          name : this.commentForm.controls.name.value,
-          email :this.commentForm.controls.email.value 
-        }
-        this.http.post('localhost:8080/savereview',JSON.stringify(data)).subscribe(res=>{
-          this.router.navigate(['/']);
-        })
+
+        // Make the API Call form this place to save the reviews.
         //  On success return to home page.
-  
+        let payload = {
+          "rate" : values.rate,
+          "review" : values.review,
+          "name": values.name,
+          "email" : values.email
+        }
+        let self = this;
+        await this.http.post('http://localhost:8080/savereview', payload).toPromise().then((res)=>{
+          if(res == "Success"){
+            this.router.navigate(['/']);
+          }
+        }).catch(err=>{console.log(err)})
       } 
     } 
   }

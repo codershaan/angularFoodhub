@@ -9,7 +9,8 @@ import { AppSettings, Settings } from 'src/app/app.settings';
 export class AboutComponent implements OnInit {
  
   public settings: Settings;
-  constructor(public appSettings:AppSettings) { 
+  constructor(public appSettings:AppSettings) {
+    // adding settings to constructor
     this.settings = this.appSettings.settings; 
   }
 

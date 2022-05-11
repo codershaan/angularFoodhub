@@ -5,21 +5,36 @@
         max-width: 200px; 
         position: absolute; 
         bottom: 0;
-        left: -35px;
     }
     .content{
         padding-left: 200px;
-        font-size: 20px;
-        font-weight: bold;
-        font-family: "Lora", serif;
     }
 }
-.leftAlign{
-    // display: flex;
-    float: left;
+
+.aligned-with-icon{
+    position: relative;
+    padding: 5px;
 }
-.rightAlign{
-    display: flex;
-    /* margin-left: 34px; */
-    flex-wrap: nowrap;
+
+#getmenulist_column{
+    display: none;
+}
+#getmenulist_row{
+    display: block;
+}
+
+.gtTouch{
+    background-color: #ffffff !important;
+    color: black !important;
+    line-height: 30px !important;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #getmenulist_column{
+        display: block !important;
+    }
+    #getmenulist_row{
+        display: none !important;
+    }
 }

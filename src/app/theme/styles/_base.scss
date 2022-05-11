@@ -852,6 +852,9 @@ button.swipe-arrow{
     fill: #fff;     
 }
 
+#ap-hd-img .header-image-wrapper{
+    margin-top: 0px;
+}
 
 /******* Frame box *******/ 
 .frame-box{
@@ -1003,7 +1006,11 @@ button.swipe-arrow{
 @media screen and (max-width: 599px) { 
     .cart-items.mat-list-base .mat-list-item.mat-list-item-with-avatar .mat-list-item-content .mat-list-text{
         padding: 0; 
-    } 
+    }
+
+    .top-toolbar.mat-toolbar{
+        height: 95px;
+    }
 } 
 
 // sm

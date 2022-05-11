@@ -21,8 +21,10 @@ export class ContactComponent implements OnInit {
     }
 
     ngOnInit() {
+        // created contact form and added validations
         this.contactForm = this.formBuilder.group({
             name: ['', Validators.required],
+            // Added Email Validation
             email: ['', Validators.compose([Validators.required, emailValidator])],
             phone: ['', Validators.required],
             message: ['', Validators.required]
@@ -30,6 +32,7 @@ export class ContactComponent implements OnInit {
     }
  
     public onContactFormSubmit():void {
+        // Oncontact Form Submit Details displayed in console
         if (this.contactForm.valid) {
             console.log(this.contactForm.value);
             let contact = this.contactForm.value;
@@ -41,7 +44,7 @@ export class ContactComponent implements OnInit {
             this.appService.PostMessage(data).subscribe(response => { 
                 console.log(response)
                 location.href = '' 
-            }, error => {
+            }, (error) => {
                 console.warn(error.responseText)
                 console.log({ error });
                 if(error.error){

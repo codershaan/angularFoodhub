@@ -1,41 +1,35 @@
 <div class="px-3">
-    <div class="theme-container ">
-        <div class="get-in-touch bg-primary mx-7" ngClass.lt-md="mt-3">
-
-            <img src="assets/images/others/operator.png" alt="">
-            <div class="content">
-                <table style="width: 98%;" class="">
-                    <thead>
-                        <tr>
-                            <td rowspan="2" style="width: 42%;">
-                                Looking for authintic food?
-                            </td>
-                            <td rowspan="2">
-                                <mat-icon style="    
-                                padding-top: 10px;
-                         font-size: 43px;
-                         width: 30px;" aria-hidden="false" aria-label="call">call</mat-icon>
-                            </td>
-                            <td>Call us now</td>
-                            <td style="text-align:right;" rowspan="2">
-                                <button style="background-color: white;color: black;" mat-button>GET IN TOUCH</button>
-                            </td>
-                        </tr>
-                        <tr>
-
-                            <td>(+91) 987 654 3210</td>
-                        </tr>
-                    </thead>
-                </table>
+    <div class="theme-container">  
+        <div class="get-in-touch bg-primary" ngClass.lt-md="mt-3"> 
+        <!--  Your code to implement Get In Touch Feature-->
+            <div id="getmenulist_row" fxLayout="row">
+                <div fxLayoutAlign="start center">
+                    <img src="assets/images/others/operator.png" class="" width="100" height="80" alt="Operator">
+                </div>
+                <div style="padding: 5px 0 0 15%;">
+                    <span style="font-family: 'Lora', serif;">Looking for Authentic Food?</span>
+                </div>
+                <div fxLayoutAlign="center center" style="padding: 0 0 0 15%;">
+                    <mat-icon class="mat-icon-sm">call</mat-icon>
+                    <span class="aligned-with-icon">(+91) 987 654 3210</span>
+                </div>
+                <div fxLayoutAlign="end center" style="padding: 0 0 0 30%;">
+                    <button class="gtTouch" (click)="navigateContactUs()" mat-button>Get In Touch</button>
+                </div>
             </div>
-            <!--  Your code to implement Get In Touch Feature-->
-            <!-- <div  [style.background-image]="bgImage" > -->
-            <!-- <div class="rightAlign">
-                Looking for authintic food?
+            
+            <div id="getmenulist_column">
+                <div>
+                    <img src="assets/images/others/operator.png" width="100" height="80" alt="Operator">
+                    <span style="font-family: 'Lora', serif; padding: 0 0 0 40%;">Looking for Authentic Food?</span>
+                </div>
+                <div style="padding: 0 0 0 40%;">
+                    <mat-icon class="mat-icon-sm">call</mat-icon><span class="aligned-with-icon">(+91) 987 654 3210</span>
+                </div>
+                <div style="padding: 0 0 0 40%;">
+                    <button class="gtTouch" (click)="navigateContactUs()" mat-button>Get In Touch</button>
+                </div>
             </div>
-            <div>
-                <mat-icon aria-hidden="false" aria-label="call">call</mat-icon>(+91) 987 654 3210
-            </div> -->
-        </div>
+        </div> 
     </div>
 </div>
