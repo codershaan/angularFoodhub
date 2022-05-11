@@ -1,7 +1,7 @@
 const express = require('express');
 
 var jsonfile = require('jsonfile');    
-var file = './data/reviews.json'
+var file = '../data/reviews.json'
 
 function createRouter() {
 
